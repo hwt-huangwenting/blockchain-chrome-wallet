@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Wallet",
+  "version": "1.0",
+  "description": "以太坊钱包 区块链学院",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ],
+  "icons": {
+    "128": "images/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+} 
