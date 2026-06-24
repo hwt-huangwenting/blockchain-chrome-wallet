@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome钱包界面</title>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .account-info {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .status {
+            color: #666;
+            font-style: italic;
+        }
+        .address {
+            word-break: break-all;
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chrome钱包界面</h1>
+        <p class="status">状态: <span id="connectionStatus">连接中...</span></p>
+        
+        <div class="account-info">
+            <h2>当前选择的账户</h2>
+            <p>地址: <span id="selectedAccount" class="address">未连接</span></p>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+        const connectionStatus = document.getElementById('connectionStatus');
+        const selectedAccount = document.getElementById('selectedAccount');
+
+        socket.on('connect', () => {
+            connectionStatus.textContent = '已连接';
+        });
+
+        socket.on('disconnect', () => {
+            connectionStatus.textContent = '已断开连接';
+            selectedAccount.textContent = '未连接';
+        });
+
+        socket.on('accountUpdate', (data) => {
+            selectedAccount.textContent = data.selectedAccount || '未选择账户';
+        });
+    </script>
+</body>
+</html> 
