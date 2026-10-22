@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" font-family="-apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0969da"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="560" fill="#ffffff"/>
+
+  <!-- Extension group -->
+  <rect x="30" y="60" width="270" height="440" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="165" y="88" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">Chrome 扩展（浏览器端）</text>
+  <rect x="52" y="106" width="226" height="70" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="165" y="132" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">popup.html / popup.js</text>
+  <text x="165" y="154" text-anchor="middle" font-size="12" fill="#57606a">UI · 解锁 · 5 分钟自动锁定</text>
+
+  <rect x="52" y="192" width="226" height="70" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="165" y="218" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">ethers.js v6</text>
+  <text x="165" y="240" text-anchor="middle" font-size="12" fill="#57606a">本地签名 · 地址推导</text>
+
+  <rect x="52" y="278" width="226" height="70" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="165" y="304" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">chrome.storage.local</text>
+  <text x="165" y="326" text-anchor="middle" font-size="12" fill="#57606a">keystore 密文（无明文私钥）</text>
+
+  <rect x="52" y="364" width="226" height="66" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="165" y="390" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Manifest V3</text>
+  <text x="165" y="412" text-anchor="middle" font-size="12" fill="#57606a">仅申请 storage + localhost 权限</text>
+
+  <!-- Server group -->
+  <rect x="360" y="60" width="250" height="440" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="485" y="88" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">本地 Node.js 服务</text>
+  <text x="485" y="107" text-anchor="middle" font-size="12" fill="#57606a">Express + Socket.io · localhost:3000</text>
+
+  <rect x="382" y="124" width="206" height="56" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="485" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">/api/sendTransaction</text>
+  <text x="485" y="166" text-anchor="middle" font-size="11.5" fill="#57606a">只接收已签名的 rawTransaction</text>
+
+  <rect x="382" y="192" width="206" height="56" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="485" y="215" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">/api/decryptKeystore</text>
+  <text x="485" y="234" text-anchor="middle" font-size="11.5" fill="#57606a">scrypt 派生密钥后解密</text>
+
+  <rect x="382" y="260" width="206" height="56" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="485" y="283" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">/api/generateAccount</text>
+  <text x="485" y="302" text-anchor="middle" font-size="11.5" fill="#57606a">生成密钥对并加密为 keystore</text>
+
+  <rect x="382" y="328" width="206" height="56" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="485" y="351" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">/api/balance/:address</text>
+  <text x="485" y="370" text-anchor="middle" font-size="11.5" fill="#57606a">余额查询 · 交易信息</text>
+
+  <rect x="382" y="396" width="206" height="56" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="485" y="419" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">Socket.io 推送</text>
+  <text x="485" y="438" text-anchor="middle" font-size="11.5" fill="#57606a">账户切换实时同步到展示页</text>
+
+  <!-- Chain -->
+  <rect x="680" y="60" width="250" height="180" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="805" y="88" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">geth 私链</text>
+  <text x="805" y="108" text-anchor="middle" font-size="12" fill="#57606a">localhost:8545 · networkid 1337</text>
+  <rect x="702" y="124" width="206" height="46" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="805" y="152" text-anchor="middle" font-size="13" fill="#1f2328">JSON-RPC（eth / net / personal）</text>
+  <rect x="702" y="180" width="206" height="42" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="805" y="206" text-anchor="middle" font-size="13" fill="#1f2328">区块 · 交易 · 余额</text>
+
+  <!-- Public page -->
+  <rect x="680" y="270" width="250" height="120" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="805" y="298" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">展示页 public/index.html</text>
+  <text x="805" y="322" text-anchor="middle" font-size="12" fill="#57606a">通过 WebSocket 接收当前账户</text>
+  <text x="805" y="344" text-anchor="middle" font-size="12" fill="#57606a">用于观察插件状态与链上数据</text>
+  <text x="805" y="366" text-anchor="middle" font-size="12" fill="#57606a">不含任何私钥信息</text>
+
+  <!-- Security note -->
+  <rect x="680" y="420" width="250" height="80" rx="10" fill="#ffffff" stroke="#0969da" stroke-dasharray="4 3"/>
+  <text x="805" y="446" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0969da">签名边界</text>
+  <text x="805" y="468" text-anchor="middle" font-size="12" fill="#57606a">私钥只在插件内存中短暂存在</text>
+  <text x="805" y="486" text-anchor="middle" font-size="12" fill="#57606a">服务端与链都接触不到私钥</text>
+
+  <!-- Arrows -->
+  <line x1="300" y1="226" x2="356" y2="150" stroke="#0969da" stroke-width="1.6" marker-end="url(#arrowBlue)"/>
+  <text x="318" y="176" font-size="11.5" fill="#0969da">rawTransaction</text>
+
+  <line x1="356" y1="220" x2="300" y2="290" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="300" y="256" font-size="11.5" fill="#57606a">解出瞬时私钥</text>
+
+  <line x1="356" y1="300" x2="300" y2="300" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <line x1="612" y1="350" x2="676" y2="200" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="620" y="268" font-size="11.5" fill="#57606a">web3.js</text>
+
+  <line x1="612" y1="424" x2="676" y2="350" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="612" y="404" font-size="11.5" fill="#57606a">账户变更推送</text>
+
+  <!-- Title -->
+  <text x="30" y="32" font-size="17" font-weight="600" fill="#1f2328">Chrome 钱包插件 · 架构与信任边界</text>
+</svg>

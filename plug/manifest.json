@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Chrome Wallet",
   "version": "1.0",
-  "description": "以太坊钱包 区块链学院",
+  "description": "本地以太坊私链钱包：keystore 加密存储、插件端签名、5 分钟自动锁定",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "images/icon128.png"
